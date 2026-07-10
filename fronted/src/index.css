@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- FONDO LOGIN CON IMAGEN --- */
+.login-bg {
+  background-image: url('./assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* ========================================================== */
+/* 🌙 GLOBAL DARK THEME SKIN OVERRIDES                       */
+/* ========================================================== */
+
+body.dark {
+  background-color: #0b0f19 !important; /* Slate 950 */
+  color: #f1f5f9 !important;
+}
+
+/* Background overrides */
+body.dark main,
+body.dark .bg-\[\#f8fafc\] {
+  background-color: #0b0f19 !important;
+}
+
+body.dark .bg-white {
+  background-color: #111827 !important; /* Slate 900 / Gray 900 */
+}
+
+body.dark .bg-slate-50,
+body.dark .bg-slate-50\/50,
+body.dark .bg-slate-100 {
+  background-color: #1f2937 !important; /* Gray 800 */
+}
+
+/* Border overrides */
+body.dark .border-slate-100,
+body.dark .border-slate-200,
+body.dark .border-slate-200\/50,
+body.dark .border-slate-50,
+body.dark .border-t,
+body.dark .border-b,
+body.dark .border {
+  border-color: #374151 !important; /* Gray 700 */
+}
+
+/* Text overrides */
+body.dark .text-slate-800,
+body.dark .text-slate-700,
+body.dark .text-slate-900,
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+  color: #f3f4f6 !important; /* Gray 100 */
+}
+
+body.dark .text-slate-600,
+body.dark .text-slate-500,
+body.dark .text-slate-400 {
+  color: #9ca3af !important; /* Gray 400 */
+}
+
+body.dark .text-slate-300 {
+  color: #6b7280 !important; /* Gray 500 */
+}
+
+/* Interactive elements */
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+  border-color: #4b5563 !important;
+}
+
+body.dark input::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Navigation & Cards */
+body.dark nav {
+  background-color: rgba(17, 24, 39, 0.8) !important;
+  border-color: #374151 !important;
+}
+
+body.dark table {
+  background-color: #111827 !important;
+}
+
+body.dark thead,
+body.dark thead th {
+  background-color: #1f2937 !important;
+  color: #9ca3af !important;
+  border-color: #374151 !important;
+}
+
+body.dark tbody tr:hover {
+  background-color: rgba(31, 41, 55, 0.5) !important;
+}
+
+body.dark .shadow-sm,
+body.dark .shadow-md,
+body.dark .shadow-lg,
+body.dark .shadow-2xl,
+body.dark .shadow-xl {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Modals */
+body.dark .bg-slate-900\/60 {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+/* Recharts / Graficos - texto */
+body.dark .recharts-text {
+  fill: #9ca3af !important;
+}
+body.dark .recharts-cartesian-grid-horizontal line,
+body.dark .recharts-cartesian-grid-vertical line {
+  stroke: #374151 !important;
+}
+
+/* ========================================================== */
+/* 🎴 AUDITORIA CARD PREMIUM DARK THEME OVERRIDES            */
+/* ========================================================== */
+
+/* 1º Oferente - Oro */
+body.dark .bg-amber-50\/70 {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+body.dark .text-amber-700 {
+  color: #fbbf24 !important; /* Amber 400 */
+}
+
+/* 2º Oferente - Plata */
+body.dark .bg-slate-100\/70 {
+  background-color: rgba(156, 163, 175, 0.08) !important;
+  border-color: rgba(156, 163, 175, 0.3) !important;
+}
+body.dark .text-slate-600 {
+  color: #cbd5e1 !important; /* Slate 300 */
+}
+
+/* Pharma Center - DPC */
+body.dark .bg-blue-50\/70 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+}
+body.dark .text-\[\#0059a3\] {
+  color: #60a5fa !important; /* Blue 400 */
+}
+
+/* Salud Renal - SR */
+body.dark .bg-indigo-50\/70 {
+  background-color: rgba(99, 102, 241, 0.08) !important;
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+body.dark .text-indigo-700 {
+  color: #818cf8 !important; /* Indigo 400 */
+}
+
+/* No Cotizado / Deshabilitados */
+body.dark .bg-slate-50.opacity-40 {
+  background-color: rgba(17, 24, 39, 0.4) !important;
+  border-color: #374151 !important;
+  opacity: 0.35 !important;
+}
+body.dark .text-slate-400 {
+  color: #6b7280 !important;
+}
+
+/* Contenedores de Iconos dentro de las tarjetas */
+body.dark .bg-white\/60 {
+  background-color: rgba(31, 41, 55, 0.7) !important;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Textos internos de tarjetas */
+body.dark .text-slate-700 {
+  color: #e5e7eb !important; /* Gray 200 */
+}
+body.dark .text-slate-500 {
+  color: #9ca3af !important; /* Gray 400 */
+}
+body.dark .text-slate-900 {
+  color: #ffffff !important;
+}
+body.dark .border-white\/60 {
+  border-color: #374151 !important;
+}

@@ -1,0 +1,28 @@
+# Dependencias instaladas
+node_modules/
+**/node_modules/
+
+# Archivos de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+**/logs/
+npm-debug.log
+yarn-error.log
+
+# Git y metadatos
+.git/
+.gitignore
+README.md
+
+# Archivos compilados o innecesarios para el build de producción
+*.zip
+*.tar.gz
+*.log
+
+# Carpetas de pruebas / scripts locales
+Migracion/
+scratch/

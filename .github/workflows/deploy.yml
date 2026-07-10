@@ -1,0 +1,29 @@
+name: Deploy to Huawei Cloud
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚀 Ejecutar script de despliegue vía SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          timeout: 5m
+          script: |
+            echo "Accediendo a la ruta de despliegue: ${{ secrets.DEPLOY_PATH }}"
+            cd ${{ secrets.DEPLOY_PATH }}
+            
+            # Asegurar que el script tenga permisos de ejecución por si acaso
+            chmod +x deploy.sh
+            
+            # Ejecutar el script (que ya incluye el set -e y manejo de errores)
+            ./deploy.sh

@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+
+# Archivos de entorno y credenciales (¡CRÍTICO!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Compilados y producción
+dist/
+build/
+
+# Archivos temporales o de bases de datos locales pesados
+*.csv
+*.sql
+*.log
+logs/
+
+# Configuraciones de editores
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+ 
+.env.*
+!.env.example
+backend/logs/
+**/node_modules/
+*.zip
+backend/src/db_unifier.js
+backend/src/find_duplicates.js
+scratch/
+/nginx.conf

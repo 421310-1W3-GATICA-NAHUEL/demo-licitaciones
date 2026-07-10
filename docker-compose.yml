@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: licitaciones-backend
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      # Las variables sensibles de base de datos y llaves de API de IA se leen desde el archivo .env del host
+    env_file:
+      - ./backend/.env
+    volumes:
+      # Montar volumen de logs local de Winston para persistencia y auditoría de IT
+      - ./backend/logs:/usr/src/app/logs
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    container_name: licitaciones-db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: drogueria_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
