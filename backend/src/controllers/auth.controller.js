@@ -172,12 +172,12 @@ const login = async (req, res) => {
             { expiresIn: '24h' }
         );
 
-        res.cookie('token', token, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
-            maxAge: 24 * 60 * 60 * 1000 // 24 horas
-        });
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'none',
+                maxAge: 24 * 60 * 60 * 1000 // 24 horas
+            });
 
         res.json({
             token,
@@ -252,12 +252,12 @@ const actualizarPerfil = async (req, res) => {
             { expiresIn: '24h' }
         );
 
-        res.cookie('token', token, {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
-            maxAge: 24 * 60 * 60 * 1000 // 24 horas
-        });
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'none',
+                maxAge: 24 * 60 * 60 * 1000 // 24 horas
+            });
 
         res.json({
             message: "Perfil actualizado con éxito.",
@@ -315,8 +315,8 @@ const checkPermissions = async (req, res) => {
         if (newToken) {
             res.cookie('token', newToken, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === 'production',
-                sameSite: 'strict',
+                secure: true,
+                sameSite: 'none',
                 maxAge: 24 * 60 * 60 * 1000 // 24 horas
             });
         }
