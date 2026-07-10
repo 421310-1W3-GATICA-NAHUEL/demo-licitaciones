@@ -270,12 +270,8 @@ const allowedOrigins = [
 
 app.use(cors({
     origin: (origin, callback) => {
-        // En desarrollo o si es el mismo origen, permitir. En producción, validar contra la whitelist.
-        if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== 'production') {
-            callback(null, true);
-        } else {
-            callback(new Error('Acceso denegado por políticas de seguridad CORS'));
-        }
+        // Al ser un portfolio demo, permitimos cualquier origen para evitar errores de CORS con Vercel
+        callback(null, true);
     },
     credentials: true
 }));
